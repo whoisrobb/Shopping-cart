@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "poppins";
-  overflow-x: hidden;
 }
 
 .header {
@@ -333,6 +332,10 @@ body {
 
 @media (max-width: 767px) {
   /* Add your responsive CSS rules for smartphones here */
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
   .header {
     padding: 0 2rem;
   }
@@ -352,6 +355,7 @@ body {
     right: 0;
     top: 3.5rem;
     width: 100%;
+    transform-origin: right;
     height: calc(100vh - 3.5rem);
   }
   .header nav ul {

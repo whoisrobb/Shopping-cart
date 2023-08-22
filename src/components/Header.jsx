@@ -11,7 +11,7 @@ const Header = () => {
     }
 
     const navStyle = {
-        transform: isOpen ? 'translateX(0%)' : 'translateX(100%)',
+        transform: isOpen ? 'scaleX(1)' : 'scaleX(0)',
         transition: 'transform 0.3s ease-in-out',
       };
       
