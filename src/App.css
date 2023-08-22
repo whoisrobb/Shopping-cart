@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins";
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  align-items: center;
+  padding: 0 5rem;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.2);
+}
+.header .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.header a {
+  text-decoration: none;
+  color: #1E1E1E;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.header ul li {
+  list-style: none;
+  margin: 0 1rem;
+}
+.header ul li button {
+  display: none;
+}
+.header ul li.shopping-cart {
+  position: relative;
+}
+.header ul li.shopping-cart span {
+  position: absolute;
+  background: rgb(247, 37, 37);
+  color: #EDEDED;
+  height: 1.1rem;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -0.3rem;
+  right: -0.7rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.home {
+  background: #E3E3E3;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+}
+.home .landing {
+  position: absolute;
+  bottom: 0;
+  right: 5rem;
+}
+.home img {
+  height: 25rem;
+}
+.home .intro {
+  width: 40rem;
+}
+.home .intro h1 {
+  font-size: 5em;
+  margin: 0;
+  color: #1E1E1E;
+}
+.home .intro p {
+  margin-bottom: 4rem;
+  color: rgba(30, 30, 30, 0.7);
+}
+.home .intro a {
+  text-decoration: none;
+  color: #EDEDED;
+  padding: 1.2rem 4rem;
+  text-transform: uppercase;
+  background: #1E1E1E;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.explore {
+  background: #EDEDED;
+  padding: 5rem;
+}
+.explore .other {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.explore .sale {
+  display: flex;
+  gap: 2rem;
+  background: #1E1E1E;
+  padding: 3rem;
+  margin: 3rem 0;
+}
+.explore .sale .img {
+  height: 20rem;
+}
+.explore .sale .img img {
+  height: 100%;
+}
+.explore .sale .details h3 {
+  color: #EDEDED;
+  font-weight: 700;
+}
+.explore .sale .details p {
+  color: rgba(237, 237, 237, 0.7);
+}
+.explore .sale .details .rating {
+  color: rgba(237, 237, 237, 0.7);
+}
+.explore .sale .details h4 {
+  color: #E3E3E3;
+  font-weight: 200;
+}
+.explore .sale .details button {
+  cursor: pointer;
+}
+.explore .sale .details .add-to-cart {
+  text-transform: uppercase;
+  background: #E3E3E3;
+  border: none;
+  color: #1E1E1E;
+  font-weight: 500;
+  padding: 1rem 2.5rem;
+}
+.explore .sale .details .actions {
+  display: flex;
+}
+.explore .sale .details .actions button {
+  background: #E3E3E3;
+  border: none;
+}
+.explore .sale .details .actions .quantity {
+  margin: 0 0.5rem;
+  color: #EDEDED;
+}
+
+.item {
+  width: 100%;
+}
+.item .cover {
+  height: 12rem;
+  background: #E3E3E3;
+  padding: 1rem;
+}
+.item .cover img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.item .bottom {
+  display: flex;
+  justify-content: space-between;
+  color: #1E1E1E;
+  padding: 1rem 0;
+}
+.item .bottom p {
+  margin: 0;
+}
+.item .bottom .name {
+  font-size: 0.8rem;
+  color: rgba(30, 30, 30, 0.5);
+}
+.item .bottom .price {
+  font-weight: 500;
+}
+
+.cart {
+  background: #EDEDED;
+  padding: 5rem;
+}
+.cart .wrapper {
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.cart .wrapper .shopping-cart {
+  width: 100%;
+  overflow: scroll;
+}
+.cart .wrapper .shopping-cart::-webkit-scrollbar {
+  display: none;
+}
+.cart .wrapper .payment {
+  width: 40rem;
+  background: #E3E3E3;
+}
+
+.cart-item {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(30, 30, 30, 0.2);
+  padding: 2rem;
+}
+.cart-item .img {
+  height: 100%;
+  aspect-ratio: 1;
+}
+.cart-item .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cart-item p {
+  margin: 0;
+}
+.cart-item .name {
+  font-size: 0.8rem;
+  color: rgba(30, 30, 30, 0.5);
+}
+.cart-item .price {
+  font-weight: 500;
+}
+.cart-item .actions {
+  display: flex;
+}
+.cart-item .quantity {
+  margin: 0 0.5rem;
+}
+.cart-item button {
+  padding: 0;
+  height: 1.5rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+.cart-item .plus, .cart-item .minus {
+  border: 1px solid rgba(30, 30, 30, 0.2);
+}
+.cart-item .plus:hover, .cart-item .minus:hover {
+  background: #1E1E1E;
+  color: #EDEDED;
+}
+.cart-item .delete {
+  color: #EDEDED;
+  background: #1E1E1E;
+  border-radius: 50%;
+}
+
+.item-detail {
+  background: #EDEDED;
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+}
+.item-detail .cover {
+  background: #E3E3E3;
+  width: 50%;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+}
+.item-detail .cover img {
+  width: 60%;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.item-detail .details {
+  width: 50%;
+  padding: 3rem;
+}
+.item-detail .details p {
+  color: rgba(30, 30, 30, 0.5);
+}
+.item-detail .details .options {
+  display: flex;
+}
+.item-detail .details .options span {
+  height: 1rem;
+  aspect-ratio: 1;
+  border: 3px solid #E3E3E3;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.item-detail .details .options .circ-1 {
+  background: rgb(201, 163, 47);
+}
+.item-detail .details .options .circ-2 {
+  background: rgb(48, 122, 235);
+}
+.item-detail .details button {
+  cursor: pointer;
+  border: none;
+}
+.item-detail .details button.add-to-cart {
+  color: #EDEDED;
+  padding: 1.2rem 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: #1E1E1E;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin: 0;
+}
+.item-detail .details .actions {
+  display: flex;
+}
+.item-detail .details .actions .quantity {
+  margin: 0 0.5rem;
+}
+.item-detail .details .actions .plus, .item-detail .details .actions .minus {
+  border: 1px solid rgba(30, 30, 30, 0.2);
+}
+.item-detail .details .actions .plus:hover, .item-detail .details .actions .minus:hover {
+  background: #1E1E1E;
+  color: #EDEDED;
+}
+
+@media (max-width: 767px) {
+  /* Add your responsive CSS rules for smartphones here */
+  .header {
+    padding: 0 2rem;
+  }
+  .header ul li button {
+    display: block;
+    z-index: 100;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+  .header nav {
+    position: absolute;
+    background: #E3E3E3;
+    right: 0;
+    top: 3.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+  }
+  .header nav ul {
+    margin-top: 10rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header nav ul li {
+    margin: 1rem;
+  }
+  .home {
+    padding: 0 2rem;
+  }
+  .home .landing {
+    right: 2rem;
+    bottom: 5rem;
+  }
+  .home img {
+    height: 15rem;
+  }
+  .home .intro {
+    position: relative;
+    width: 30rem;
+    bottom: 5rem;
+  }
+  .home .intro h1 {
+    font-size: 3rem;
+  }
+  .home .intro p {
+    font-size: 0.8rem;
+  }
+  .home .intro a {
+    padding: 1rem 2rem;
+  }
+  .explore {
+    padding: 5rem 2rem;
+  }
+  .explore .other {
+    flex-direction: column;
+  }
+  .sale {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .sale .img img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .item-detail {
+    padding: 5rem 2rem;
+    flex-direction: column;
+  }
+  .item-detail .cover {
+    width: 100%;
+    height: 100%;
+  }
+  .item-detail .cover img {
+    width: 80%;
+  }
+  .item-detail .details {
+    width: 100%;
+  }
+  .cart {
+    padding: 5rem 2rem;
+  }
+  .cart .wrapper {
+    flex-direction: column;
+  }
+  .cart-item {
+    padding: 2rem 0;
+  }
+}
+/* Styles for screens between 768px and 991px (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Add your responsive CSS rules for tablets here */
+}
+/* Styles for screens between 992px and 1199px (small desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Add your responsive CSS rules for small desktops here */
+}
+/* Styles for screens 1200px and above (large desktops) */
+@media (min-width: 1200px) {
+  /* Add your responsive CSS rules for large desktops here */
+}/*# sourceMappingURL=App.css.map */
